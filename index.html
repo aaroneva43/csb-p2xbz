@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Angular Custom Select</title>
+
+    <meta name="description" content="overview &amp; stats" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- basic styles -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        margin-top: 20px;
+        margin-bottom: 150px;
+      }
+    </style>
+  </head>
+
+  <body ng-app="Demo">
+    <div class="container" ng-controller="DemoController">
+      <label>Level 1</label>
+      <div
+        custom-select="g for g in nestedItemsLevel1 | filter: $searchTerm"
+        custom-select-options="level1Options"
+        ng-model="level1"
+      ></div>
+    </div>
+    <!-- basic scripts -->
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    <script src="customSelect.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
